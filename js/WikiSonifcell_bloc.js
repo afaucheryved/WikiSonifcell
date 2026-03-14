@@ -16,14 +16,14 @@ const Bloc = class{ // class qui definie un bloc
         this.answer.textContent = reponse;
         //style bloc
         this.bloc.style.color=couleur;
-        this.bloc.style.border = `10px solid rgba(${this.couleur})`;
+        this.bloc.style.border = `5px solid rgba(${this.couleur})`;
         this.bloc.style.opacity = 0.9;
-        this.bloc.style.backgroundColor = `rgba(${this.couleur}, 0.1)`;
+        this.bloc.style.backgroundColor = `rgba(${this.couleur}, 0.2)`;
         this.bloc.style.minHeight = "50px";
         this.bloc.style.maxWidth = "300px";
-        this.bloc.style.borderRadius = "25px";
+        this.bloc.style.borderRadius = "15px";
         this.bloc.style.textAlign = "center";
-        this.bloc.style.fontSize = "35px";
+        this.bloc.style.fontSize = "25px";
         this.bloc.style.color = `rgba(${this.couleur})`;
         this.bloc.style.fontFamily = "Segoe UI, Roboto, Helvetica, Arial, sans-serif";
         this.bloc.style.fontWeight = "bold";
@@ -40,13 +40,14 @@ let tableBlocs = document.createElement("table");
 tableBlocs.style.borderCollapse = "separate";
 tableBlocs.style.borderSpacing = "15px";
 
-let c1 = document.createElement("th");//on fait 2 colonnes de bloc
-let c2 = document.createElement("th");
+let c1 = document.createElement("tr");//on fait 2 colonnes de bloc
+let c2 = document.createElement("tr");
 
 const listeBlocs = [];
-listeBlocs.push(new Bloc("rouge", "question", "reponse").bloc);
-listeBlocs.push(new Bloc("vert", "question2", "reponse2").bloc);
-listeBlocs.push(new Bloc("rouge", "question3", "reponse3").bloc);
+listeBlocs.push(new Bloc("rouge", "question1 question1 question1", "reponse").bloc);
+listeBlocs.push(new Bloc("vert", "question2question2 question2", "reponse2").bloc);
+listeBlocs.push(new Bloc("rouge", "question3 question3 question3", "reponse3").bloc);
+listeBlocs.push(new Bloc("rouge", "question3 question3 question3", "reponse3").bloc);
 
 for(let i =0; i<listeBlocs.length; i++){ // de façon à remplire 1 col puis l'autre
     let cel = document.createElement("td");
