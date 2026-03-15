@@ -13,6 +13,8 @@ let l3 = document.createElement("tr");
 //fonction d'une zone/case
 function Case(txtContent="", couleur="#455561", txtContentHoover="", txtContentClick=""){ //le dernier paramètre correpoond aux explications qui apparaissent en hoover
     // si on met rien, c'est une case fantome (pour la structure)
+    //attention, on mettera sans doute des elements explicatif en appendChild qui ne sera pas forcement du string, mais des div pas ex.
+    //   --> dans ce cas, changer la valeur par default "" en null.
     let cv = document.createElement("td");
     isCliked = false; //pour si on a cliqué, le txt reste le même jusqu'au clique suivant
     cv.style.verticalAlign = "top";
@@ -24,21 +26,29 @@ function Case(txtContent="", couleur="#455561", txtContentHoover="", txtContentC
     cv.addEventListener('mouseenter', function() {
         if(!isCliked){
             cv.textContent = txtContentHoover; // si on passe dessus, txt explicatif s'affiche
+            cv.style.textAlign = "center";
+            cv.style.fontWeight = "normal";
         }
     }
     )
     cv.addEventListener('mouseleave', function() {
         if(!isCliked){
             cv.textContent = txtContent;
+            cv.style.textAlign = "left";
+            cv.style.fontWeight = "bold";
         }
     }
     )
     cv.addEventListener('click', function(){
         if(isCliked){
+            cv.style.textAlign = "left";
+            cv.style.fontWeight = "bold";
             cv.textContent = txtContent
             isCliked = false;
         }
         else{
+            cv.style.textAlign = "center";
+            cv.style.fontWeight = "normal";
             cv.textContent = txtContentClick;
             isCliked = true;
         }
