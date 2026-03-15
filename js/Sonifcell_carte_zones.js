@@ -1,31 +1,53 @@
 //creation initiale table vide
 let carte = document.createElement("table");
 carte.style.borderSpacing="0px";
+carte.style.fontFamily = "Segoe UI, Roboto, Helvetica, Arial, sans-serif";
+//carte.style.color = "#455561";
+carte.style.fontWeight = "bold";
+
+// Dans ton constructeur :
 let l1 = document.createElement("tr"); //3lignes
 let l2 = document.createElement("tr");
 let l3 = document.createElement("tr");
 
 //fonction d'une zone/case
-function Case(txtContent="", couleur="#455561", txtContentHoover=""){ //le dernier paramètre correpoond aux explications qui apparaissent en hoover
+function Case(txtContent="", couleur="#455561", txtContentHoover="", txtContentClick=""){ //le dernier paramètre correpoond aux explications qui apparaissent en hoover
     // si on met rien, c'est une case fantome (pour la structure)
     let cv = document.createElement("td");
+    isCliked = false; //pour si on a cliqué, le txt reste le même jusqu'au clique suivant
+    cv.style.verticalAlign = "top";
+    cv.style.textAlign = "left";
     cv.style.width = "200px";
-    cv.style.height = "100px";
+    cv.style.height = "130px";
     cv.textContent = txtContent;
     cv.style.backgroundColor = couleur;
     cv.addEventListener('mouseenter', function() {
-        cv.textContent = txtContentHoover; // si on passe dessus, txt explicatif s'affiche
+        if(!isCliked){
+            cv.textContent = txtContentHoover; // si on passe dessus, txt explicatif s'affiche
+        }
     }
     )
     cv.addEventListener('mouseleave', function() {
-        cv.textContent = txtContent;
+        if(!isCliked){
+            cv.textContent = txtContent;
+        }
     }
     )
+    cv.addEventListener('click', function(){
+        if(isCliked){
+            cv.textContent = txtContent
+            isCliked = false;
+        }
+        else{
+            cv.textContent = txtContentClick;
+            isCliked = true;
+        }
+    })
     return cv;
 }
 
 //Creations zones
-let parametre = Case("parametre", "#954141", "exemple exemple exemple");
+let parametre = Case("parametre", "#954141", "exemple exemple exemple", "tu as cliqué \n truc \n autre truc");
 let userInteraction = Case("user interaction", "#954141", "exemple exemple exemple");
 let dataInput = Case("data input", "#954141", "exemple exemple exemple");
 let sound = Case("sound", "#5E6FA7", "exemple exemple exemple");
