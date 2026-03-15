@@ -83,9 +83,3 @@ carte.appendChild(l3);
 //à modifier pour le merge
 document.body.appendChild(carte);
 document.body.style.backgroundColor = "#455561";
-
-
-
-
-
-
