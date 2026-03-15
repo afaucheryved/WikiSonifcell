@@ -2,10 +2,10 @@
 const Bloc = class{ // class qui definie un bloc
     constructor(couleur, question, reponse){
         if(couleur == "rouge"){
-            this.couleur="149, 65, 65";
+            this.couleur="160, 65, 65";
         }
         else{
-            this.couleur="34, 107, 73";
+            this.couleur="44,132,91";//"34, 107, 73";
         }
         this.question=question;
         this.reponse=reponse;
@@ -34,7 +34,7 @@ const Bloc = class{ // class qui definie un bloc
         this.bloc.appendChild(this.answer);
     }
 }
-document.body.style.backgroundColor="#455561";
+document.body.style.backgroundColor="#455561"; // à enlever apres merge
 
 let tableBlocs = document.createElement("table");
 tableBlocs.style.borderCollapse = "separate";
