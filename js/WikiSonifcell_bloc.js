@@ -66,6 +66,7 @@ document.body.style.backgroundColor="#455561"; // à enlever apres merge
 let tableBlocs = document.createElement("table");
 tableBlocs.style.borderCollapse = "separate";
 tableBlocs.style.borderSpacing = "15px";
+tableBlocs.style.margin= "auto";
 
 let c1 = document.createElement("tr");//on fait 2 colonnes de bloc
 let c2 = document.createElement("tr");
@@ -88,4 +89,16 @@ for(let i =0; i<listeBlocs.length; i++){ // de façon à remplire 1 col puis l'a
     }
 tableBlocs.appendChild(c1);
 tableBlocs.appendChild(c2);
-document.body.appendChild(tableBlocs);// à changer pour le merge
+//autres elements : 
+let titreAc = document.createElement("h2");
+titreAc.textContent = "questions rapides";
+titreAc.style.fontFamily = "Segoe UI, Roboto, Helvetica, Arial, sans-serif";
+titreAc.style.color = "#FFF";
+titreAc.style.paddingTop = "50px";
+titreAc.style.paddingBottom = "20px";
+titreAc.style.fontSize = "20px";
+titreAc.style.fontWeight = "normal";
+titreAc.style.textAlign = "center";
+let parent = document.querySelector(".content");
+parent.appendChild(titreAc);
+parent.appendChild(tableBlocs);// à changer pour le merge
