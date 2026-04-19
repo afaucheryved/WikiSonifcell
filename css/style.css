@@ -99,3 +99,25 @@ body {
 .content details summary {
     font-weight: bold;
 }
+
+.content h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.content p {
+    color: white;
+}
+.content h3 {
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.content li {
+    color: white;
+}
+
+.logo {
+    text-decoration: none;
+}

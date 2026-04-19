@@ -8,7 +8,7 @@ function creerCategorie(nom, listeFonctions)
         let element = document.createElement("li");
         let lien = document.createElement("a");
         lien.textContent = listeFonctions[i];
-        lien.href = "definition.html";
+        lien.href = "definition.html?fonction=" + listeFonctions[i];
         element.appendChild(lien);
         liste.appendChild(element);
   
