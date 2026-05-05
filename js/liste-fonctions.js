@@ -22,7 +22,7 @@ function creerCategorie(nom, listeFonctions)
 
 let grille = document.createElement("div");
 
-let cat1 = creerCategorie("Fonctions mathématiques", ["Atan", "Cos", "Sin", "Tan", "Asin", "Acos"]);
+let cat1 = creerCategorie("Mathematics functions", ["Atan", "Cos", "Sin", "Tan", "Asin", "Acos"]);
 // Base
 let catBase = creerCategorie("Base", ["Null", "Custom", "Pass", "Console Log"]);
 
@@ -57,7 +57,7 @@ let catLogic = creerCategorie("Logic", ["If-then-else", "HigherThan", "GreaterOr
 // Mathématiques (Arithmétique & Mappings)
 let catMappings = creerCategorie("Mappings", ["Linear"]);
 let catArithmetics = creerCategorie("Arithmetics", ["+", "-", "×", "÷", "Abs", "Ceil", "Floor", "Power", "Round", "Sign", "Sqrt"]);
-let catTrigonometry = creerCategorie("Trigonométrie", ["Acos", "Asin", "Atan", "Atan2", "Cos", "Sin", "Tan"]);
+let catTrigonometry = creerCategorie("Trigonometry", ["Acos", "Asin", "Atan", "Atan2", "Cos", "Sin", "Tan"]);
 
 // Parsers
 let catParsers = creerCategorie("Parsers", ["Parse Float", "Parse Int", "Parse JSON", "Parse OSC"]);
