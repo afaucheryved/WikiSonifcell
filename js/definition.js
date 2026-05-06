@@ -447,12 +447,14 @@ if(f.input.length > 0) {
     document.querySelector(".content").appendChild(listeInput);
 }
 
+
 if(f.output) {
     let titreOutput = document.createElement("h3");
     titreOutput.textContent = "Output";
-    let output = document.createElement("p");
-    output.textContent = f.output;
+    let listeOutput = document.createElement("ul");
+    let li = document.createElement("li");
+    li.textContent = f.output;
+    listeOutput.appendChild(li);
     document.querySelector(".content").appendChild(titreOutput);
-    document.querySelector(".content").appendChild(output);
+    document.querySelector(".content").appendChild(listeOutput);
 }
-
