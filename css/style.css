@@ -209,3 +209,9 @@ body {
 .content .grille {
     margin-top: 32px;
 }
+
+.content img {
+    width: 400px !important;
+    height: auto !important;
+    display: block;
+}
