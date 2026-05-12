@@ -41,9 +41,9 @@ function creerBlocRouge(texte, reponse) {
 
 
 
-let bloc1 = creerBlocRouge("Pourquoi aucun son ne sort de mon programme ?", "\n1: Vérifiez que vous avez bien vun bloc de type 'générator' dans la sonne Sound. \n2: Vérifiez de celui-ci est connecté (symbole interrupteur fermé). \n3: vérifiez que sa sortie est non-nulle (clique doit dnas l'angla en haut à gdroite du bloc). \n4: Si tout échoue, si vous avez mis un bloc 'CosWave', remplcez-le par un 'SinWave'. ");
-let bloc2 = creerBlocRouge("Comment vérifier la sortie de mes bloc en directe ?", "Double cliquez sur l'angle en haut à droite de votre bloc. Une fenêtre jaune s'ouvrira, contenant ce qui sort du bloc, avec son type spécifié.");
-let bloc3 = creerBlocRouge("Comment enregistrer le rendu sonor de mon programme ?","Assurez-vous que tout les interrupteurs de vos blocs générateurs de son soient connectés, puis appuyez sur le carré noir, en haut du panneau de contrôle. Appuyez sur carré rouge pour stopper l'enregistrement. Enregistez ensuite.");
+let bloc1 = creerBlocRouge("Why is no sound coming out of my program?", "\n1: Check that you have a 'generator' type block in the Sound zone. \n2: Check that it is connected (closed switch symbol). \n3: Check that its output is non-zero (right-click in the top-right corner of the block). \n4: If all else fails, if you used a 'CosWave' block, replace it with a 'SinWave'.");
+let bloc2 = creerBlocRouge("How to check the output of my blocks live?", "Double-click on the top-right corner of your block. A yellow window will open, showing what is coming out of the block, with its type specified.");
+let bloc3 = creerBlocRouge("How to record the audio output of my program?", "Make sure all the switches of your sound generator blocks are connected, then press the black square at the top of the control panel. Press the red square to stop recording. Then save your file.");
 colonneRouge.appendChild(bloc1);
 colonneRouge.appendChild(bloc2);
 colonneRouge.appendChild(bloc3);
@@ -77,12 +77,11 @@ function creerBlocVert(texte, reponse) {
     });
     return bloc;
 }
-let blocv1 = creerBlocVert("Comment réinitialiser le zoom ?", "Cliquez sur le logo en forme de maison en haut à gauche.");
-let blocv2 = creerBlocVert("Comment supprimer un bloc ?", "Cliquez sur le bloc en question, puis appuiyez sur la touche suppr.");
-let blocv3 = creerBlocVert("Comment créer un bloc ?","Double cliquez sur l'emplaçement où vous voulez mettre votre bloc.");
+let blocv1 = creerBlocVert("How to reset the zoom?", "Click on the house-shaped logo at the top left.");
+let blocv2 = creerBlocVert("How to delete a block?", "Click on the block in question, then press the Delete key.");
+let blocv3 = creerBlocVert("How to create a block?", "Double-click on the location where you want to place your block.");
 colonneVerte.appendChild(blocv1);
 colonneVerte.appendChild(blocv2);
 colonneVerte.appendChild(blocv3);
 grille.appendChild(colonneVerte);
 document.querySelector(".content").appendChild(grille);
-

@@ -57,11 +57,11 @@ cv.addEventListener('click', function(){
 return cv;
 }
 
-let parametre = Case("171px", "553px","parametre", "#954141", "'number', 'range', ...", "Place des paramètres fixes par raport au programme, qui ne varient pas selon les entrés.");
-let userInteraction = Case("171px", "553px","user interaction", "#954141", "'UCP', 'UDP', ...", "Place pour les blocs d'interaction avec l'utilisateur (cf exempel souris)");
-let dataInput = Case("301px", "251px", "data input", "#954141", "'loadCSV', 'HTTP text', ...", "Place des données à traiter, récupérées sous forme de tableau, texte, etc...");
-let sound = Case("301px", "251px", "sound", "#5E6FA7", "'CowWave', 'TanWave', ...", "Vous devez obligatoirement mettre vos blocs générant du son dnas cette zone pour qu'ils fonctionnent");
-let mapping = Case("301px", "552px", "mapping", "#4CB081", "'+', 'if-else-then', MID to frequency', ...", "C'est cette zone où vous devait faire le gros de votre programme. Les bloc que vous y mettez doivent donc traiter les entrées des autres zones ('Parameter', 'Input Data' et ' pour  orienter les signaux traités au final vers la zone 'sound'.");
+let parametre = Case("171px", "553px","parameter", "#954141", "'number', 'range', ...", "Place fixed parameters relative to the program, which do not vary according to inputs.");
+let userInteraction = Case("171px", "553px","user interaction", "#954141", "'UCP', 'UDP', ...", "Space for user interaction blocks (e.g., mouse interaction).");
+let dataInput = Case("301px", "251px", "data input", "#954141", "'loadCSV', 'HTTP text', ...", "Place for data to be processed, retrieved as tables, text, etc.");
+let sound = Case("301px", "251px", "sound", "#5E6FA7", "'CowWave', 'TanWave', ...", "You must place blocks that generate sound in this area for them to function correctly.");
+let mapping = Case("301px", "552px", "mapping", "#4CB081", "'+', 'if-else-then', 'MID to frequency', ...", "This is the area where the main part of your program is built. The blocks placed here process inputs from other zones ('Parameter', 'Data Input') to route the final processed signals to the 'Sound' zone.");
 
 l1.appendChild(Case());
 l1.appendChild(parametre);
