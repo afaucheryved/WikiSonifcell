@@ -41,7 +41,7 @@ function creerBlocRouge(texte, reponse) {
 
 
 
-let bloc1 = creerBlocRouge("Pourquoi aucun son ne sort de mon programme ?", "1: Vérifiez que vous avez bien vun bloc de type 'générator' dans la sonne Sound. \n2: Vérifiez de celui-ci est connecté (symbole interrupteur fermé). \n3: vérifiez que sa sortie est non-nulle (clique doit dnas l'angla en haut à gdroite du bloc). \n4: Si tout échoue, si vous avez mis un bloc 'CosWave', remplcez-le par un 'SinWave'. ");
+let bloc1 = creerBlocRouge("Pourquoi aucun son ne sort de mon programme ?", "\n1: Vérifiez que vous avez bien vun bloc de type 'générator' dans la sonne Sound. \n2: Vérifiez de celui-ci est connecté (symbole interrupteur fermé). \n3: vérifiez que sa sortie est non-nulle (clique doit dnas l'angla en haut à gdroite du bloc). \n4: Si tout échoue, si vous avez mis un bloc 'CosWave', remplcez-le par un 'SinWave'. ");
 let bloc2 = creerBlocRouge("Comment vérifier la sortie de mes bloc en directe ?", "Double cliquez sur l'angle en haut à droite de votre bloc. Une fenêtre jaune s'ouvrira, contenant ce qui sort du bloc, avec son type spécifié.");
 let bloc3 = creerBlocRouge("Comment enregistrer le rendu sonor de mon programme ?","Assurez-vous que tout les interrupteurs de vos blocs générateurs de son soient connectés, puis appuyez sur le carré noir, en haut du panneau de contrôle. Appuyez sur carré rouge pour stopper l'enregistrement. Enregistez ensuite.");
 colonneRouge.appendChild(bloc1);
