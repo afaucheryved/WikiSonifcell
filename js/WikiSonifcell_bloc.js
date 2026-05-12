@@ -41,9 +41,9 @@ function creerBlocRouge(texte, reponse) {
 
 
 
-let bloc1 = creerBlocRouge("question 1", "ma réponse 1");
-let bloc2 = creerBlocRouge("question 2", "ma réponse 2");
-let bloc3 = creerBlocRouge("question 3","ma reponse 3");
+let bloc1 = creerBlocRouge("Pourquoi aucun son ne sort de mon programme ?", "1: Vérifiez que vous avez bien vun bloc de type 'générator' dans la sonne Sound. \n2: Vérifiez de celui-ci est connecté (symbole interrupteur fermé). \n3: vérifiez que sa sortie est non-nulle (clique doit dnas l'angla en haut à gdroite du bloc). \n4: Si tout échoue, si vous avez mis un bloc 'CosWave', remplcez-le par un 'SinWave'. ");
+let bloc2 = creerBlocRouge("Comment vérifier la sortie de mes bloc en directe ?", "Double cliquez sur l'angle en haut à droite de votre bloc. Une fenêtre jaune s'ouvrira, contenant ce qui sort du bloc, avec son type spécifié.");
+let bloc3 = creerBlocRouge("Comment enregistrer le rendu sonor de mon programme ?","Assurez-vous que tout les interrupteurs de vos blocs générateurs de son soient connectés, puis appuyez sur le carré noir, en haut du panneau de contrôle. Appuyez sur carré rouge pour stopper l'enregistrement. Enregistez ensuite.");
 colonneRouge.appendChild(bloc1);
 colonneRouge.appendChild(bloc2);
 colonneRouge.appendChild(bloc3);
@@ -77,9 +77,9 @@ function creerBlocVert(texte, reponse) {
     });
     return bloc;
 }
-let blocv1 = creerBlocVert("question 1", "ma réponse 1");
-let blocv2 = creerBlocVert("question 2", "ma réponse 2");
-let blocv3 = creerBlocVert("question 3","ma reponse 3");
+let blocv1 = creerBlocVert("Comment réinitialiser le zoom ?", "Cliquez sur le logo en forme de maison en haut à gauche.");
+let blocv2 = creerBlocVert("Comment supprimer un bloc ?", "Cliquez sur le bloc en question, puis appuiyez sur la touche suppr.");
+let blocv3 = creerBlocVert("Comment créer un bloc ?","Double cliquez sur l'emplaçement où vous voulez mettre votre bloc.");
 colonneVerte.appendChild(blocv1);
 colonneVerte.appendChild(blocv2);
 colonneVerte.appendChild(blocv3);

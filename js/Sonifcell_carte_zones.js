@@ -59,11 +59,11 @@ function Case(l= "130px", L= "200px",txtContent="", couleur="#455561", txtConten
 }
 
 //Creations zones
-let parametre = Case("171px", "553px","parametre", "#954141", "exemple exemple exemple", "tu as cliqué \n truc \n autre truc");
-let userInteraction = Case("171px", "553px","user interaction", "#954141", "exemple exemple exemple");
-let dataInput = Case("301px", "251px", "data input", "#954141", "exemple exemple exemple");
-let sound = Case("301px", "251px", "sound", "#5E6FA7", "exemple exemple exemple");
-let mapping = Case("301px", "552px", "mapping", "#4CB081", "exemple exemple exemple");
+let parametre = Case("171px", "553px","parametre", "#954141", "'number', 'range', ...", "Place des paramètres fixes par raport au programme, qui ne varient pas selon les entrés.");
+let userInteraction = Case("171px", "553px","user interaction", "#954141", "'UCP', 'UDP', ...", "Place pour les blocs d'interaction avec l'utilisateur (cf exempel souris)");
+let dataInput = Case("301px", "251px", "data input", "#954141", "'loadCSV', 'HTTP text', ...", "Place des données à traiter, récupérées sous forme de tableau, texte, etc...");
+let sound = Case("301px", "251px", "sound", "#5E6FA7", "'CowWave', 'TanWave', ...", "Vous devez obligatoirement mettre vos blocs générant du son dnas cette zone pour qu'ils fonctionnent");
+let mapping = Case("301px", "552px", "mapping", "#4CB081", "'+', 'if-else-then', MID to frequency', ...", "C'est cette zone où vous devait faire le gros de votre programme. Les bloc que vous y mettez doivent donc traiter les entrées des autres zones ('Parameter', 'Input Data' et ' pour  orienter les signaux traités au final vers la zone 'sound'.");
 
 // pack :
 l1.appendChild(Case());
