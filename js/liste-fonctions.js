@@ -11,18 +11,15 @@ function creerCategorie(nom, listeFonctions)
         lien.href = "definition.html?fonction=" + listeFonctions[i];
         element.appendChild(lien);
         liste.appendChild(element);
-  
         }
     
     bloc.appendChild(summary); 
     bloc.appendChild(liste);   
     return bloc;               
-    
 }
 
-let grille = document.createElement("div");
+const container = document.querySelector(".content");
 
-let cat1 = creerCategorie("Mathematics functions", ["Atan", "Cos", "Sin", "Tan", "Asin", "Acos"]);
 // Base
 let catBase = creerCategorie("Base", ["Null", "Custom", "Pass", "Console Log"]);
 
@@ -44,17 +41,17 @@ let catGenerators = creerCategorie("Generators", ["Click", "Brownian Noise", "Wh
 // Oscillateurs
 let catOscillators = creerCategorie("Oscillators", ["CosineWave", "Modulate Sine", "SawTooth", "SineWave", "Square", "TanWave", "Triangle"]);
 
-// Entrées & Fichiers (Inputs)
+// Entrées & Fichiers
 let catFiles = creerCategorie("Files", ["Load Audio", "Load CSV", "Load Image", "Load TXT", "Load XLSX"]);
 let catParameters = creerCategorie("Parameters", ["Number", "Range", "Text"]);
 
-// Réseau & Communication (Sockets)
+// Réseau & Communication
 let catSockets = creerCategorie("Sockets", ["HTTP Text", "HTTP Audio", "TCP", "UDP"]);
 
 // Logique & Comparaisons
 let catLogic = creerCategorie("Logic", ["If-then-else", "HigherThan", "GreaterOrEqual", "LowerThan", "LessOrEqual", "Equal", "NotEqual", "And", "Or", "Not"]);
 
-// Mathématiques (Arithmétique & Mappings)
+// Mathématiques
 let catMappings = creerCategorie("Mappings", ["Linear"]);
 let catArithmetics = creerCategorie("Arithmetics", ["+", "-", "×", "÷", "Abs", "Ceil", "Floor", "Power", "Round", "Sign", "Sqrt"]);
 let catTrigonometry = creerCategorie("Trigonometry", ["Acos", "Asin", "Atan", "Atan2", "Cos", "Sin", "Tan"]);
@@ -62,11 +59,8 @@ let catTrigonometry = creerCategorie("Trigonometry", ["Acos", "Asin", "Atan", "A
 // Parsers
 let catParsers = creerCategorie("Parsers", ["Parse Float", "Parse Int", "Parse JSON", "Parse OSC"]);
 
-// Traitement du Signal (Playback & Smooth)
-let catPlayback = creerCategorie("Playback", ["Diff + retain", "Retain Max", "Retain Min", "Retain Value", "Smooth", "Speed Multiplier"]);
-document.querySelector(".content").appendChild(cat1);
-
-const container = document.querySelector(".content");
+// Traitement du Signal
+let catPlayback = creerCategorie("Playback", ["Diff", "Retain Max", "Retain Min", "Retain Value", "Smooth", "Speed Multiplier"]);
 
 container.appendChild(catBase);
 container.appendChild(catArrays);

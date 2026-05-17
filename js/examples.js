@@ -11,7 +11,8 @@ const exemples = {
             "Connect MIDI to Frequency to a CosineWave block to play the sound",
             "Don't forget to connect the sound output"
         ],
-        image: null,
+        fonctions: ["Number", "Equal", "Load TXT", "Serve slice", "If-then-else", "MIDI to Frequency", "CosineWave"],
+        image: "exemplecondition.jpeg",
         download: null
     },
     "deviation": {
@@ -27,7 +28,8 @@ const exemples = {
             "Don't forget to connect the sound output",
             "Tip: right-click the top-right corner of any block to visualize its output value in real time"
         ],
-        image: null,
+        fonctions: ["Load CSV", "Serve slice", "Number", "-", "MIDI to Frequency", "SineWave"],
+        image: "reference.jpeg",
         download: null
     },
     "scale": {
@@ -43,6 +45,7 @@ const exemples = {
             "Connect MIDI to Frequency to a CosineWave block",
             "Don't forget to connect the sound output"
         ],
+        fonctions: ["Load CSV", "Serve slice", "Number", "×", "MIDI to Frequency", "CosineWave"],
         image: null,
         download: null
     },
@@ -59,6 +62,7 @@ const exemples = {
             "Connect MIDI to Frequency to a SineWave block",
             "Don't forget to connect the sound output"
         ],
+        fonctions: ["UDP", "Range", "×", "MIDI to Frequency", "SineWave"],
         code: `import socket
 import pyautogui
 import time
@@ -72,7 +76,7 @@ while True:
     sock.sendto(str(x).encode(), (UDP_IP, UDP_PORT))
     time.sleep(0.01)
     print(x, y)`,
-        image: null,
+        image: "mouse.jpeg",
         download: null
     },
     "morse": {
@@ -90,7 +94,8 @@ while True:
             "Connect the If-then-else output to a SineWave block",
             "Don't forget to connect the sound output"
         ],
-        image: null,
+        fonctions: ["Load CSV", "Serve slice", "Number", "Equal", "If-then-else", "SineWave"],
+        image: "morse.jpeg",
         download: null
     }
 };

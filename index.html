@@ -5,6 +5,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>WikiSonifcell</title>
+    <style>
+        .hero-section {
+            padding-bottom: 64px;
+            margin-bottom: 64px;
+            border-bottom: 1px solid rgba(216, 224, 238, 0.12);
+            position: relative;
+        }
+
+        .hero-eyebrow {
+            font-size: 9px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: rgba(216, 224, 238, 0.35);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .hero-eyebrow::before {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 1px;
+            background: rgba(216, 224, 238, 0.35);
+        }
+
+        .hero-title-big {
+            font-family: 'Noto Serif JP', serif;
+            font-size: clamp(48px, 6vw, 80px);
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: -0.02em;
+            color: #D8E0EE;
+            margin-bottom: 32px;
+        }
+
+        .hero-title-big em {
+            font-style: italic;
+            color: rgba(216, 224, 238, 0.4);
+        }
+
+        .hero-desc {
+            font-size: 14px;
+            line-height: 2.2;
+            color: rgba(216, 224, 238, 0.55);
+            max-width: 520px;
+            margin-bottom: 48px;
+        }
+
+        .hero-nav-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2px;
+            max-width: 680px;
+        }
+
+        .hero-nav-card {
+            padding: 24px 28px;
+            background: rgba(216, 224, 238, 0.03);
+            border: 1px solid rgba(216, 224, 238, 0.08);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            group: true;
+        }
+
+        .hero-nav-card:hover {
+            background: rgba(216, 224, 238, 0.06);
+            border-color: rgba(216, 224, 238, 0.2);
+        }
+
+        .hero-nav-card:hover .card-arrow {
+            transform: translateX(4px);
+        }
+
+        .card-left { display: flex; flex-direction: column; gap: 4px; }
+
+        .card-label {
+            font-size: 9px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(216, 224, 238, 0.3);
+        }
+
+        .card-title {
+            font-size: 13px;
+            font-weight: 400;
+            color: #D8E0EE;
+            letter-spacing: 0.04em;
+        }
+
+        .card-arrow {
+            font-size: 16px;
+            color: rgba(216, 224, 238, 0.25);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 48px;
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(216, 224, 238, 0.06);
+        }
+
+        .stat { display: flex; flex-direction: column; gap: 4px; }
+
+        .stat-value {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 28px;
+            font-weight: 300;
+            color: #D8E0EE;
+            letter-spacing: -0.02em;
+        }
+
+        .stat-label {
+            font-size: 9px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(216, 224, 238, 0.3);
+        }
+
+        .faq-title {
+            font-size: 9px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: rgba(216, 224, 238, 0.3);
+            margin-bottom: 0;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(216, 224, 238, 0.06);
+        }
+    </style>
 </head>
 <body>
     <a href="index.html" class="logo">WikiSonifcell</a>
@@ -18,6 +153,67 @@
             </ul>
         </aside>
         <main class="content">
+
+            <!-- HERO -->
+            <div class="hero-section">
+                <p class="hero-eyebrow">Official documentation</p>
+                <h1 class="hero-title-big">
+                    Wiki<em>Sonifcell</em>
+                </h1>
+                <p class="hero-desc">
+                    The complete reference for Sonifcell — a visual block-programming software for sonification. Find every function documented, with examples, a usage guide, and an interactive block map.
+                </p>
+
+                <div class="hero-nav-grid">
+                    <a href="pages/liste-fonctions.html" class="hero-nav-card">
+                        <div class="card-left">
+                            <span class="card-label">Reference</span>
+                            <span class="card-title">Function List</span>
+                        </div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="pages/examples-list.html" class="hero-nav-card">
+                        <div class="card-left">
+                            <span class="card-label">Learn by doing</span>
+                            <span class="card-title">Examples</span>
+                        </div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="pages/page_carte_zones.html" class="hero-nav-card">
+                        <div class="card-left">
+                            <span class="card-label">Understand</span>
+                            <span class="card-title">Block Mechanics</span>
+                        </div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="pages/guide.html" class="hero-nav-card">
+                        <div class="card-left">
+                            <span class="card-label">Get started</span>
+                            <span class="card-title">Usage Guide</span>
+                        </div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-value">75+</span>
+                        <span class="stat-label">Functions documented</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">5</span>
+                        <span class="stat-label">Examples</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">16</span>
+                        <span class="stat-label">Categories</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <p class="faq-title">Quick answers</p>
+
         </main>
     </div>
     <script src="js/WikiSonifcell_bloc.js"></script>
