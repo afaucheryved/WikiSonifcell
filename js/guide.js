@@ -1,11 +1,10 @@
-// ─────────────────────────────────────────────────────────────
 // guide.js
 // Generates the usage guide page.
 // Each tip is created with creerAstuce(title, text, image).
-// ─────────────────────────────────────────────────────────────
 
 // Creates a single tip block with a title, text, and optional image.
 // image: filename in assets/ folder, or leave empty for no image.
+
 function creerAstuce(titre, texte, image) {
     let div = document.createElement("div");
     let h2 = document.createElement("h2");
@@ -27,11 +26,10 @@ function creerAstuce(titre, texte, image) {
     return div;
 }
 
-// ─────────────────────────────────────────────────────────────
 // TIPS
 // To add a tip: creerAstuce("Title", "Explanation text", "image.png")
 // Leave the third argument empty if there is no image.
-// ─────────────────────────────────────────────────────────────
+
 let astuce1 = creerAstuce("Delete a block", "Select a block and press the Delete key to remove it.");
 let astuce2 = creerAstuce("Resize a block", "Touch and drag the bottom-right corner of a block to resize it.");
 let astuce3 = creerAstuce("Live output", "Right-click on a block to see its output value in real time.");

@@ -1,10 +1,7 @@
-// ─────────────────────────────────────────────────────────────
 // examples.js
 // Contains the data for all examples shown in the wiki.
 // This file is loaded by both examples-list.js and examples-page.js.
-// ─────────────────────────────────────────────────────────────
 
-// ─────────────────────────────────────────────────────────────
 // EXAMPLES DATA
 // To add a new example:
 //   1. Add a new entry below with a unique key (e.g. "myexample")
@@ -20,7 +17,7 @@
 //   image       : filename of the screenshot in assets/ (or null)
 //   download    : filename of the downloadable file in assets/downloads/ (or null)
 //   code        : optional code block shown on the page (e.g. Python script)
-// ─────────────────────────────────────────────────────────────
+
 const exemples = {
     "condition": {
         title: "Condition Example",
