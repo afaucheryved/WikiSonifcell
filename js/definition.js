@@ -1,6 +1,18 @@
+// definition.js
+// Displays the definition page for a single Sonifcell function.
+// The function name is passed via the URL parameter: ?fonction=Atan
+
 let params = new URLSearchParams(window.location.search);
 let nomFonction = params.get("fonction");
-console.log(nomFonction);
+
+// FUNCTION DEFINITIONS
+// To add or edit a function, find its entry below and update:
+//   - description : plain text explanation
+//   - input       : array of strings, one per input parameter
+//   - output      : string describing the output (empty if none)
+// To add a new function, copy an existing entry and change the key.
+// The key must exactly match the function name used in liste-fonctions.js.
+
 
 const fonctions = {
     "Null": { 
@@ -390,6 +402,11 @@ const fonctions = {
     }
 };
 
+// PAGE RENDERING — no need to edit below this
+
+// Breadcrumb navigation: Home — Function List — [function name]
+
+
 let breadcrumb = document.createElement("div");
 breadcrumb.style.fontSize = "11px";
 breadcrumb.style.letterSpacing = "0.1em";
@@ -431,7 +448,6 @@ description.textContent = fonctions[nomFonction].description;
 document.querySelector(".content").appendChild(titre);
 document.querySelector(".content").appendChild(description);
 
-
 let f = fonctions[nomFonction];
 
 if(f.input.length > 0) {
@@ -446,7 +462,6 @@ if(f.input.length > 0) {
     document.querySelector(".content").appendChild(titreInput);
     document.querySelector(".content").appendChild(listeInput);
 }
-
 
 if(f.output) {
     let titreOutput = document.createElement("h3");

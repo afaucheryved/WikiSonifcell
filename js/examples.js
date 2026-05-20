@@ -1,3 +1,26 @@
+// ─────────────────────────────────────────────────────────────
+// examples.js
+// Contains the data for all examples shown in the wiki.
+// This file is loaded by both examples-list.js and examples-page.js.
+// ─────────────────────────────────────────────────────────────
+
+// ─────────────────────────────────────────────────────────────
+// EXAMPLES DATA
+// To add a new example:
+//   1. Add a new entry below with a unique key (e.g. "myexample")
+//   2. Fill in: title, description, steps, fonctions, image, download
+//   3. Add the key to the listeExemples array in examples-list.js
+//   4. Place the image file in assets/ and the download file in assets/downloads/
+//
+// Fields:
+//   title       : display name of the example
+//   description : short paragraph explaining what the program does
+//   steps       : array of strings, one instruction per step
+//   fonctions   : array of function names used (must match keys in definition.js)
+//   image       : filename of the screenshot in assets/ (or null)
+//   download    : filename of the downloadable file in assets/downloads/ (or null)
+//   code        : optional code block shown on the page (e.g. Python script)
+// ─────────────────────────────────────────────────────────────
 const exemples = {
     "condition": {
         title: "Condition Example",
@@ -63,19 +86,7 @@ const exemples = {
             "Don't forget to connect the sound output"
         ],
         fonctions: ["UDP", "Range", "×", "MIDI to Frequency", "SineWave"],
-        code: `import socket
-import pyautogui
-import time
-
-UDP_IP = "127.0.0.1"
-UDP_PORT = 49153
-sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-
-while True:
-    x, y = pyautogui.position()
-    sock.sendto(str(x).encode(), (UDP_IP, UDP_PORT))
-    time.sleep(0.01)
-    print(x, y)`,
+        code: `import socket\nimport pyautogui\nimport time\n\nUDP_IP = "127.0.0.1"\nUDP_PORT = 49153\nsock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)\n\nwhile True:\n    x, y = pyautogui.position()\n    sock.sendto(str(x).encode(), (UDP_IP, UDP_PORT))\n    time.sleep(0.01)\n    print(x, y)`,
         image: "mouse.jpeg",
         download: null
     },

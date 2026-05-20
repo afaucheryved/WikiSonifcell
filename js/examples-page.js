@@ -48,9 +48,11 @@ document.querySelector(".content").appendChild(description);
 // Image principale
 if(ex.image) {
     let img = document.createElement("img");
+    let div = document.createElement("div");
     img.src = "../assets/" + ex.image;
-    img.style.cssText = "width: 100%; max-width: 700px; display: block; margin-top: 24px; margin-bottom: 8px; border-radius: 8px;";
-    document.querySelector(".content").appendChild(img);
+    img.style.cssText = " margin-top: 24px; margin-bottom: 8px; border-radius: 8px;";
+    div.appendChild(img);
+    document.querySelector(".content").appendChild(div);
 }
 
 // Étapes
