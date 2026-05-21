@@ -27,6 +27,7 @@ function creerBlocRouge(texte, reponse) {
     let paragraphe = document.createElement("p");
     paragraphe.textContent = reponse;
     bloc.appendChild(paragraphe);
+    paragraphe.style.padding = "0 20px 20px 20px";
     bloc.className = "bloc rouge";
     bloc.style.borderRadius = "15px";
     bloc.style.border = "4px solid rgba(160, 65, 65)";
@@ -55,6 +56,7 @@ function creerBlocVert(texte, reponse) {
     let paragraphe = document.createElement("p");
     paragraphe.textContent = reponse;
     bloc.appendChild(paragraphe);
+    paragraphe.style.padding = "0 20px 20px 20px";
     bloc.className = "bloc vert";
     bloc.style.borderRadius = "15px";
     bloc.style.border = "4px solid #226B49";

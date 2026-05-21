@@ -48,7 +48,7 @@ const exemples = {
             "Don't forget to connect the sound output",
             "Tip: right-click the top-right corner of any block to visualize its output value in real time"
         ],
-        fonctions: ["Load CSV", "Serve slice", "Number", "-", "MIDI to Frequency", "SineWave"],
+        fonctions: ["Load CSV", "Serve slice", "Number", "-","MIDI to Frequency", "SineWave"],
         image: "reference.jpeg",
         download: null
     },

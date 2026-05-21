@@ -61,7 +61,7 @@ let parametre = Case("171px", "553px","parameter", "#954141", "'number', 'range'
 let userInteraction = Case("171px", "553px","user interaction", "#954141", "'UCP', 'UDP', ...", "Space for user interaction blocks (e.g., mouse interaction).");
 let dataInput = Case("301px", "251px", "data input", "#954141", "'loadCSV', 'HTTP text', ...", "Place for data to be processed, retrieved as tables, text, etc.");
 let sound = Case("301px", "251px", "sound", "#5E6FA7", "'CowWave', 'TanWave', ...", "You must place blocks that generate sound in this area for them to function correctly.");
-let mapping = Case("301px", "552px", "mapping", "#4CB081", "'+', 'if-else-then', 'MID to frequency', ...", "This is the area where the main part of your program is built. The blocks placed here process inputs from other zones ('Parameter', 'Data Input') to route the final processed signals to the 'Sound' zone.");
+let mapping = Case("301px", "552px", "mapping", "#4CB081", "'+', 'if-else-then', 'MIDI to frequency', ...", "This is the area where the main part of your program is built. The blocks placed here process inputs from other zones ('Parameter', 'Data Input') to route the final processed signals to the 'Sound' zone.");
 
 l1.appendChild(Case());
 l1.appendChild(parametre);
